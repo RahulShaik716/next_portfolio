@@ -216,8 +216,8 @@ export const Experiences = [
       "Designed and developed scalable full-stack applications using Next.js, React, Node.js, and TypeScript to enhance user experience and business operations.",
       "Collaborated with cross-functional teams, including Sales, Marketing, and Finance, to deliver solutions that streamline workflows and meet organizational goals.",
       "Integrated APIs and payment gateways like Stripe to ensure seamless financial transactions and improve system functionality.",
-      " Managed database infrastructure, optimized data warehousing, and utilized AWS cloud services for secure and efficient deployment.",
-      " Thrived in a fast-paced startup environment by adapting to evolving processes and delivering high-quality solutions within tight deadlines.",
+      "Managed database infrastructure, optimized data warehousing, and utilized AWS cloud services for secure and efficient deployment.",
+      "Thrived in a fast-paced startup environment by adapting to evolving processes and delivering high-quality solutions within tight deadlines.",
     ],
   },
   {
@@ -242,10 +242,10 @@ export const Experiences = [
     description:
       "Led cross-functional teams to deliver scalable, innovative applications, integrating advanced technologies like Azure facial recognition and driving efficiency through automation and CI/CD pipelines.",
     achievements: [
-      'Led and managed a team of 5 for the development of the "Shell Lube Analyst" mobile app, overseeing planning, estimation, and execution.',
-      'Briefly led the "Shell Fleet Assistant" development team, implementing Realm.js for offline capabilities and ensuring on-time delivery through cross-team coordination.',
-      'Co-led the development of the "Shell Driver Hub" using .NET and React.js, collaborating with international teams to automate BDD testing with Selenium, SpecFlow, and Azure DevOps CI/CD pipelines.',
-      'Designed and deployed Node.js backend APIs for a "Scan & Go" project, integrating with SAP Hybris to streamline checkout processes.',
+      "Led and managed a team of 5 for the development of the Shell Lube Analyst mobile app, overseeing planning, estimation, and execution.",
+      "Briefly led the Shell Fleet Assistant development team, implementing Realm.js for offline capabilities and ensuring on-time delivery through cross-team coordination.",
+      "Co-led the development of the Shell Driver Hub using .NET and React.js, collaborating with international teams to automate BDD testing with Selenium, SpecFlow, and Azure DevOps CI/CD pipelines.",
+      "Designed and deployed Node.js backend APIs for a Scan & Go project, integrating with SAP Hybris to streamline checkout processes.",
       "Spearheaded Azure facial recognition integration, significantly enhancing application security and user experience.",
       "Pioneered multiple proof-of-concept applications to explore and validate emerging technologies, driving innovation and technical growth.",
     ],
@@ -257,7 +257,7 @@ export const Experiences = [
     description:
       "Developed robust mobile and web applications using modern frameworks, enhancing user engagement and streamlining processes with innovative backend integrations and efficient workflows.",
     achievements: [
-      'Developed the "Shell Lube Analyst" and "Shell Fleet Assistant" mobile apps using React Native and GraphQL, ensuring robust and scalable architecture.',
+      "Developed the Shell Lube Analyst and Shell Fleet Assistant mobile apps using React Native and GraphQL, ensuring robust and scalable architecture.",
       "Implemented offline-first functionality using Realm.js, improving app reliability and user satisfaction.",
       "Created end-to-end testing pipelines with load/stress testing and automated workflows for quality assurance and continuous delivery.",
       "Contributed to Drupal-based website development, managing content for a high-traffic platform efficiently.",
@@ -272,7 +272,7 @@ export const Experiences = [
     description:
       "Developed high-quality mobile and web applications, leveraging modern frameworks and backend integrations to enhance user engagement and streamline processes.",
     achievements: [
-      'Developed "Rem-Monitor" mobile application in Java for monitoring current running on Navy ships.',
+      "Developed Rem-Monitor mobile application in Java for monitoring current running on Navy ships.",
       "Implemented contextual messaging functionality within an Android application for AP Startup Event, enhancing user experience and event engagement.",
     ],
   },

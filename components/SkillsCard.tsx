@@ -4,7 +4,10 @@ export default function SkillsCard({ skill }) {
       <h1 className="font-bold text-xl">{skill.title}</h1>
       <div className="flex flex-row gap-3 flex-wrap">
         {skill.skills.map((s) => (
-          <div className="px-3 py-2 bg-slate-100 font-medium rounded-full">
+          <div
+            key={s}
+            className="px-3 py-2 bg-slate-100 font-medium rounded-full"
+          >
             {s}
           </div>
         ))}
