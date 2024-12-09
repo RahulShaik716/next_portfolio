@@ -8,9 +8,9 @@ export default function Page() {
       {/* tabs for masters,bachelors and javascript */}
       <div className="flex flex-row items-center justify-center gap-6 mt-2 border-b">
         <div className="hover:border-b border-slate-400 cursor-pointer p-2">
-          Bachelor's
+          {`Bachelor's`}
         </div>
-        <div className="hover:border-b border-slate-400 p-2"> Master's</div>
+        <div className="hover:border-b border-slate-400 p-2">{`Master's`}</div>
         <div className="hover:border-b border-slate-400 p-2">Javascript</div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-10">

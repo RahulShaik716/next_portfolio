@@ -55,8 +55,8 @@ export default function Home() {
         <form className="flex flex-col gap-3 border border-slate-300 max-w-3xl mx-auto p-6 rounded-md">
           <h2 className="h2 font-bold text-2xl text-center"> Get in touch </h2>
           <p className="text-center text-slate-500">
-            I'd love to hear from you! Send me a message and I'll get back to
-            you as soon as possible
+            {`I'd love to hear from you! Send me a message and I'll get back to
+            you as soon as possible`}
           </p>
           <div className="flex flex-col gap-1">
             <label htmlFor="name">Name</label>

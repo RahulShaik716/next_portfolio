@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <header className="fixed z-1 w-full mx-auto flex justify-between border-b p-2 bg-white opacity-100">
           <Link href="/">
-            <h1> Rahul's Shaik Portfolio </h1>
+            <h1> {`Rahul's Shaik Portfolio`} </h1>
           </Link>
           <nav className="flex gap-x-2">
             <ul className="hidden lg:flex flex-row gap-x-1">
