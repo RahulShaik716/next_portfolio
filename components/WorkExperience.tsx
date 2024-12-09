@@ -2,7 +2,20 @@
 
 import { useState } from "react";
 
-export default function WorkExperience({ exp, index }) {
+type Experience = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  achievements: string[];
+};
+
+interface WorkExperienceProps {
+  exp: Experience;
+  index: number;
+}
+
+export default function WorkExperience({ exp, index }: WorkExperienceProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const toggleExpand = (index: number) => {
@@ -24,7 +37,7 @@ export default function WorkExperience({ exp, index }) {
             <p className="text-slate-600">{exp.description}</p>
             {expandedIndex === index && (
               <ul className="list-disc list-inside mt-4 space-y-2">
-                {exp.achievements.map((achievement, i) => (
+                {exp.achievements.map((achievement: string, i: number) => (
                   <li key={i}>{achievement}</li>
                 ))}
               </ul>

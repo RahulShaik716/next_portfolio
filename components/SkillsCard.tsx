@@ -1,4 +1,9 @@
-export default function SkillsCard({ skill }) {
+type Props = {
+  title: string;
+  skills: string[];
+};
+
+export default function SkillsCard({ skill }: { skill: Props }) {
   return (
     <div className="border border-slate-200 max-w-md px-4 py-4 rounded-lg flex flex-col gap-3">
       <h1 className="font-bold text-xl">{skill.title}</h1>

@@ -1,6 +1,11 @@
 import Image from "next/image";
-
-export default function ProjectCard({ project }) {
+type props = {
+  img_src: string;
+  title: string;
+  technologies: string[];
+  description: string;
+};
+export default function ProjectCard({ project }: { project: props }) {
   return (
     <div className="flex flex-col max-w-2xl  border border-slate-200 rounded-lg">
       <Image
