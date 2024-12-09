@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: props }) {
           <h2 className="font-bold text-xl"> {project.title} </h2>
           <p className="text-slate-400">{project.technologies.join(" ,")}</p>
         </div>
-        <p className="mt-2">{project.description}</p>
+        <p className="mt-2 max-h-24 overflow-clip">{project.description}</p>
         <button className="p-2 border border-slate-200 text-left w-fit rounded-lg">
           <p>Learn More</p>
         </button>

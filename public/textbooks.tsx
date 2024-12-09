@@ -169,41 +169,165 @@ export const Skills = [
 
 export const Projects = [
   {
-    img_src: "file.svg",
-    title: "E-commerce Platform",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
+    img_src: "prompt.jpg",
+    title: "Promptopia",
+    technologies: ["Next JS", "SQLite", "Google Cloud", "Next Auth"],
     description:
-      "A full-stack e-commerce platform with features like user authentication , product Management,and order processing.",
+      "Developed a platform using Next.js where users can share AI prompts. The platform allows users to create, browse, and interact with a variety of AI prompts, making it easier for developers, researchers, and enthusiasts to discover and use prompts in their projects. The application utilizes GraphQL for efficient data management and retrieval, enabling seamless integration with databases and ensuring a responsive user experience. Implemented features such as user authentication, prompt rating and commenting, and search functionalities to enhance community interaction and prompt discovery. This platform serves as a valuable resource for anyone looking to leverage AI in creative ways, fostering collaboration and knowledge sharing within the AI community.",
+    website_url: "https://share-prompts-five-delta.vercel.app/",
+    github_url: "",
+  },
+  {
+    img_src: "DV.jpg",
+    title: "Income Prediction for College Enrollment Strategy",
+    technologies: [
+      "Machine Learning",
+      "Python",
+      "Jupyter Notebook",
+      "Pandas",
+      "MatPlotLib",
+      "Scipy",
+    ],
+    description:
+      "Analyzed data from the United States Census Bureau to develop a predictive model of individual incomes. This model aimed at enhancing marketing efforts for UVW College by identifying potential students based on their predicted future incomes. The project utilized machine learning algorithms such as regression models to forecast incomes, allowing the college to tailor its enrollment strategy to attract the right demographic.",
     website_url: "",
     github_url: "",
   },
   {
-    img_src: "file.svg",
-    title: "E-commerce Platform",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
+    img_src: "DPS.jpg",
+    title: " Spatial Data Analysis",
+    technologies: [
+      "Java",
+      "Scala",
+      "Apache Spark",
+      "Python",
+      "PostgreSQL",
+      "POSTGIS",
+    ],
     description:
-      "A full-stack e-commerce platform with features like user authentication , product Management,and order processing.",
+      "Conducted geospatial data analysis to identify hot and cold spots for targeted marketing strategies. Employed technologies like Java, Scala, and Apache Spark for processing large-scale spatial data, allowing for in-depth insights into geographical patterns and trends. This project enabled the efficient analysis of data from various sources to support decision-making processes in marketing and strategic planning.",
     website_url: "",
     github_url: "",
   },
   {
-    img_src: "file.svg",
-    title: "E-commerce Platform",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
+    img_src:
+      "https://rahulshaik716.github.io/static/media/LA.a1ce7ac5bbfc6a9b6a50.webp",
+    title: "Lube Analyst",
+    technologies: [
+      "React Native",
+      "GraphQL ",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "JWT",
+      "Adobe Analytics",
+      "XCode",
+      "Android Studio",
+    ],
     description:
-      "A full-stack e-commerce platform with features like user authentication , product Management,and order processing.",
+      "Led the mobile application development for a team of five developers, overseeing project estimation, planning, and task assignment. Coordinated sprint-wise 1:1 meetings to monitor progress and gather feedback. Organized daily scrum stand-ups to address blockers and ensure timely updates on tasks. Delivered two versions of the Shell Lube Analyst app: one for internal Shell use and another white-labeled version for external clients. Managed branding and themes dynamically using React Context, providing a customizable experience for different clients. Integrated GraphQL for flexible and optimized data querying, enhancing performance for over 10,000 internal users and 5,000 client users.",
     website_url: "",
     github_url: "",
   },
   {
-    img_src: "file.svg",
-    title: "E-commerce Platform",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
+    img_src:
+      "https://rahulshaik716.github.io/static/media/SFA.8ab686d25854634e515d.webp",
+    title: "Shell Fleet Assistant Driver",
+    technologies: [
+      "React Native",
+      "Node.js",
+      "Azure DevOps",
+      "Express",
+      "Realm JS",
+      "Jest",
+      "New Relic",
+      "XCode",
+      "Android Studio",
+    ],
     description:
-      "A full-stack e-commerce platform with features like user authentication , product Management,and order processing.",
+      "Led the development of a LinkedIn-style platform using React Native and JavaScript, facilitating recruitment for fleet drivers and managers by employing machine learning algorithms for job-driver matching. The project utilized advanced search algorithms and filtering systems to optimize job recommendations for drivers. Integration with Azure DevOps CI/CD pipelines enabled automation, while custom APIs developed with Node.js and GraphQL improved data querying efficiency. Realm.js was used for offline functionality, ensuring seamless access and usability even in low-connectivity environments for drivers in remote locations.",
     website_url: "",
     github_url: "",
   },
+  {
+    img_src: "download.png",
+    title: "Shell DriverHub",
+    technologies: [
+      "React",
+      ".Net",
+      "SQL",
+      "BDD",
+      "Specflow",
+      "Selenium",
+      "Server Side Rendering",
+    ],
+    description:
+      "Developed a LinkedIn-style platform using React Native and JavaScript for Shell, facilitating recruitment for fleet drivers and managers. The platform utilizes machine learning algorithms for job-driver matching, integrating advanced search algorithms and filtering systems to optimize job recommendations. The project employed Azure DevOps CI/CD pipelines for automation, along with custom APIs built with Node.js and GraphQL for efficient data querying. Realm.js was used to provide offline functionality, ensuring seamless access and usability even in low-connectivity environments for drivers in remote locations.",
+    website_url: "",
+    github_url: "",
+  },
+  {
+    img_src:
+      "https://rahulshaik716.github.io/static/media/s&c.88fb1bf878740bd4a74e.png",
+    title: "Shell Scan & Go",
+    technologies: [
+      "React Native",
+      "Hermes",
+      "Redux",
+      "Razor Pay",
+      "Redux",
+      "Node JS",
+      "SAP Hybrirs",
+    ],
+    description:
+      "Developed a mobile app using React Native and ES6 for Shell’s Scan & Go project, enabling real-time barcode scanning for product checkout and improving shopping efficiency for over 5,000 active users. Integrated Hermes for optimized JavaScript execution, reducing app load times by 30% and enhancing performance under heavy user loads. Designed a modular and scalable architecture using Redux for state management, enabling seamless data flow between UI components and backend services. Implemented secure payment integration via Razor Pay, ensuring compliance with PCI-DSS standards and protecting user data during transactions. Optimized the app for cross-platform performance, leveraging native modules for iOS and Android, resulting in a 25% reduction in crashes and improved user experience.",
+    website_url: "",
+    github_url: "",
+  },
+  {
+    img_src: "download.png",
+    title: "Retail Sandbox",
+    technologies: [
+      "Android Studio",
+      "Drupal",
+      "Unity",
+      "PhoneGap",
+      "NodeJS",
+      "Azure Cloud",
+    ],
+    description:
+      "As part of my work in the Shell Retail Sandbox, I undertook the development of several proof-of-concept (POC) projects. These POCs served as prototypes or initial implementations of potential solutions for various challenges or opportunities within the retail domain",
+    website_url: "",
+    github_url: "",
+  },
+  {
+    img_src:
+      "https://rahulshaik716.github.io/static/media/beacons.18114121f785049f5e2b.jpg",
+    title: "Android IOT Applications with Beacons",
+    technologies: ["Android Studio", "Beacon", "Java"],
+    description:
+      "In my role, I am responsible for developing an Android app that utilizes beacon technology to provide users with personalized and contextually relevant messages",
+    website_url: "",
+    github_url: "",
+  },
+  {
+    img_src:
+      "https://rahulshaik716.github.io/static/media/Remmonitor.8db5d20aeda30633eb6e.png",
+    title: "RemMonitor",
+    technologies: ["Java", "Swing", "SQL"],
+    description:
+      "Remmonitor is a Java application that I have developed for monitoring current in navy ships. Leveraging the capabilities of RXTX serial communication, J2Mod library, and SQL database, Remmonitor provides a robust and efficient solution for gathering and analyzing current data in real-time.",
+    website_url: "",
+    github_url: "",
+  },
+  // {
+  //   img_src: "",
+  //   title: "",
+  //   technologies: [],
+  //   description: "",
+  //   website_url: "",
+  //   github_url: "",
+  // },
 ];
 export const Experiences = [
   {
