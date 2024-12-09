@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata: Metadata = {
   title: "Rahul Shaik's Portfolio",
   description:
@@ -77,6 +78,7 @@ export default function RootLayout({
         </header>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
