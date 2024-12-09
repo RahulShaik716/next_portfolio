@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /api/
+Sitemap: https://vercel.com/rahulshaik716s-projects/next-portfolio/sitemap.xml
