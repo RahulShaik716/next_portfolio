@@ -147,7 +147,15 @@ export const Textbooks = [
 export const Skills = [
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "TailwindCSS", "FramerMotion"],
+    skills: [
+      "HTML5",
+      "CSS3",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "React Native",
+    ],
   },
   {
     title: "Backend",
@@ -155,15 +163,77 @@ export const Skills = [
   },
   {
     title: "Databases",
-    skills: ["MongoDB", "SQL", "MySQL"],
+    skills: ["MongoDB", "SQL", "MySQL", "NoSQL", "PostgreSQL"],
   },
   {
     title: "DevOps",
-    skills: ["Git", "Docker", "AWS", "CI/CD", "Azure", "Google Cloud"],
+    skills: [
+      "Git",
+      "Docker",
+      "Vitest",
+      "Jest",
+      "Playwright",
+      "Github Actions",
+      "Selenium",
+      "JUnit",
+      "Vite",
+      "Webpack",
+      "Babel",
+    ],
   },
   {
     title: "Tools",
-    skills: ["VSCode", "Figma", "Postman", "Jira"],
+    skills: ["VSCode", "Figma", "Postman", "Jira", "Azure DevOps"],
+  },
+  {
+    title: "ORM",
+    skills: ["Prisma", "Mongoose"],
+  },
+  {
+    title: "Programming Languages",
+    skills: ["C", "C++", "Java", "JavaScript", "Python"],
+  },
+  {
+    title: "Framework Libraries",
+    skills: ["NumPy", "Scipy", "Pandas  "],
+  },
+  {
+    title: "Development Methodologies",
+    skills: ["Agile"],
+  },
+  {
+    title: "Areas of Expertise",
+    skills: ["Data Strutures", "Design Patterns", "Data Mining"],
+  },
+  {
+    title: "Operating Systems",
+    skills: ["Windows", "Linux"],
+  },
+  {
+    title: "Accessibility and Analytics",
+    skills: [
+      "Web Accessibility Guidelines 2.2",
+      "Google Analytics",
+      "Adobe Analytics",
+      "W3C",
+    ],
+  },
+  {
+    title: "Architecture",
+    skills: ["Micro-Services", "Event-Driven", "Layered Architecture"],
+  },
+  {
+    title: "Cloud",
+    skills: ["Google", "Azure", "Amazon Web Serives", "Digital Ocean"],
+  },
+  {
+    title: "Leadership Skills",
+    skills: [
+      "Scrum Master",
+      "Project Management",
+      "Communication and Colloboration",
+      "Decision-Making",
+    ],
   },
 ];
 
@@ -399,5 +469,26 @@ export const Experiences = [
       "Developed Rem-Monitor mobile application in Java for monitoring current running on Navy ships.",
       "Implemented contextual messaging functionality within an Android application for AP Startup Event, enhancing user experience and event engagement.",
     ],
+  },
+];
+
+export const Testimonials = [
+  {
+    img_src: "file.svg",
+    name: "John Doe",
+    role: "CEO, Tech Innovators",
+    content: `"Working with this developer was a game-changer for our project. Their expertise in React and Node.js helped us deliver a top-notch product ahead of schedule."`,
+  },
+  {
+    img_src: "file.svg",
+    name: "John Doe",
+    role: "CEO, Tech Innovators",
+    content: `"Working with this developer was a game-changer for our project. Their expertise in React and Node.js helped us deliver a top-notch product ahead of schedule."`,
+  },
+  {
+    img_src: "file.svg",
+    name: "John Doe",
+    role: "CEO, Tech Innovators",
+    content: `"Working with this developer was a game-changer for our project. Their expertise in React and Node.js helped us deliver a top-notch product ahead of schedule."`,
   },
 ];

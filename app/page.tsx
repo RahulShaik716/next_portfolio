@@ -1,7 +1,13 @@
 import ProjectCard from "@/components/ProjectCard";
 import SkillsCard from "@/components/SkillsCard";
+import TestimonialCard from "@/components/TestimonialCard";
 import WorkExperience from "@/components/WorkExperience";
-import { Projects, Skills, Experiences } from "@/public/textbooks";
+import {
+  Projects,
+  Skills,
+  Experiences,
+  Testimonials,
+} from "@/public/textbooks";
 import Link from "next/link";
 
 export default function Home() {
@@ -49,7 +55,12 @@ export default function Home() {
         </div>
       </section>
       <section id="testimonials" className="py-20">
-        <div> Testimonials</div>
+        <div className="text-center text-2xl font-bold mb-5"> Testimonials</div>
+        <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
+          {Testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.name} testimonial={testimonial} />
+          ))}
+        </div>
       </section>
       <section id="contact" className="py-20">
         <form className="flex flex-col gap-3 border border-slate-300 max-w-3xl mx-auto p-6 rounded-md">

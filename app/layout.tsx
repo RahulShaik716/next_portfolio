@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   title: "Rahul Shaik's Portfolio",
   description:
     "Website to introduce myself to the world and the world to introduce themselves to me.",
-  keywords: "Full Stack Developer, JavaScript, React, Next.js, Web Development",
+  keywords:
+    "Full Stack Developer, JavaScript, React, Next.js, Web Development, Rahul Shaik Full Stack Developer, Rahul Shaik, Dada Rahul Teja Shaik, Rahul Shaik ASU, Rahul Shaik Shell, Rahul Shaik NRE, Rahul Shaik Next JS",
   authors: [{ name: "Dada Rahul Teja Shaik" }],
 };
 
@@ -37,7 +38,7 @@ export default function RootLayout({
       <body>
         <header className="fixed z-10 w-full mx-auto flex justify-between border-b p-2 bg-white opacity-100">
           <Link href="/">
-            <h1> {`Rahul's Shaik Portfolio`} </h1>
+            <h1> {`Rahul Shaik Portfolio`} </h1>
           </Link>
           <nav className="flex gap-x-2">
             <ul className="hidden lg:flex flex-row gap-x-1">
