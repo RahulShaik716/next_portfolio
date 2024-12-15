@@ -1,6 +1,15 @@
 import Image from "next/image";
-
-export default async function TestimonialCard({ testimonial }) {
+type props = {
+  content: string;
+  img_src: string;
+  name: string;
+  role: string;
+};
+export default async function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: props;
+}) {
   return (
     <div className="border border-slate-200 max-w-md px-4 py-4 rounded-lg flex flex-col gap-3">
       <p className="italic tracking-wide leading-normal">
