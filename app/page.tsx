@@ -1,6 +1,8 @@
+import MessageForm from "@/components/MessageForm";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsCard from "@/components/SkillsCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialForm from "@/components/TestimonialForm";
 import WorkExperience from "@/components/WorkExperience";
 import {
   Projects,
@@ -8,11 +10,12 @@ import {
   Experiences,
   Testimonials,
 } from "@/public/textbooks";
+import { ArrowRight } from "@geist-ui/icons";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container max-w-7xl mx-auto">
+    <main className="container max-w-7xl mx-auto px-4 md:px-0 bg-opacity-50 background-blur-md shadow-md">
       <section id="hero" className="py-20 text-center">
         <h1 className="text-4xl font-bold mb-4 animate-fade-in">Rahul Shaik</h1>
         <p className="text-xl mb-8 animate-fade-in animation-delay-200">
@@ -24,9 +27,9 @@ export default function Home() {
         <button className="animate-fade-in animation-delay-500">
           <Link
             href="#contact"
-            className="inline-flex items-center bg-black text-white px-6 py-2 rounded-md"
+            className="inline-flex items-center bg-foreground text-background px-6 py-2 rounded-md"
           >
-            Get in touch
+            Get in touch &nbsp; <ArrowRight />
           </Link>
         </button>
       </section>
@@ -54,48 +57,29 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="testimonials" className="py-20">
-        <div className="text-center text-2xl font-bold mb-5"> Testimonials</div>
-        <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
-          {Testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.name} testimonial={testimonial} />
-          ))}
-        </div>
-      </section>
+      {Testimonials.length && (
+        <section id="testimonials" className="py-20">
+          <div className="text-center text-2xl font-bold mb-5">
+            Testimonials
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
+            {Testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                testimonial={testimonial}
+              />
+            ))}
+          </div>
+        </section>
+      )}
       <section id="contact" className="py-20">
-        <form className="flex flex-col gap-3 border border-slate-300 max-w-3xl mx-auto p-6 rounded-md">
-          <h2 className="h2 font-bold text-2xl text-center"> Get in touch </h2>
-          <p className="text-center text-slate-500">
-            {`I'd love to hear from you! Send me a message and I'll get back to
-            you as soon as possible`}
-          </p>
-          <div className="flex flex-col gap-1">
-            <label htmlFor="name">Name</label>
-            <input
-              name="name"
-              className="border border-slate-300 py-2 rounded-md"
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label htmlFor="email">Email</label>
-            <input
-              name="email"
-              className="border border-slate-300 py-2 rounded-md"
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              className="border border-slate-300 py-2 rounded-md"
-            />
-          </div>
-          <input
-            type="sumbit"
-            className="text-center bg-black text-white py-2 rounded-md"
-            value="Send Message"
-          />
-        </form>
+        <div className="text-2xl font-bold text-center mb-5">
+          Contact & Testimonials
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(500px,_1fr))] gap-10">
+          <MessageForm />
+          <TestimonialForm />
+        </div>
       </section>
     </main>
   );

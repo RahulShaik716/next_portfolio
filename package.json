@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@geist-ui/icons": "^1.0.2",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "next": "15.0.4",

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 export const metadata: Metadata = {
   title: "Rahul Shaik's Portfolio",
   description:
@@ -36,50 +37,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <header className="fixed z-10 w-full mx-auto flex justify-between border-b p-2 bg-white opacity-100">
-          <Link href="/">
-            <h1> {`Rahul Shaik Portfolio`} </h1>
-          </Link>
-          <nav className="flex gap-x-2">
-            <ul className="hidden lg:flex flex-row gap-x-1">
-              <Link href="courses" className="border-r px-2 py-1">
-                Courses
-              </Link>
-              <Link href="#workexperience" className="border-r px-2 py-1">
-                Work Experience
-              </Link>
-              <Link href="#projects" className="border-r px-2 py-1">
-                Projects
-              </Link>
-              <Link href="#skills" className="border-r px-2 py-1">
-                Skills
-              </Link>
-              <Link href="#contact" className="border-r px-2 py-1">
-                Contact Me
-              </Link>
-            </ul>
-            <ul className="flex flex-col gap-y-1 absolute lg:hidden">
-              <Link href="courses" className="border-r px-2 py-1">
-                Courses
-              </Link>
-              <Link href="#workexperience" className="border-r px-2 py-1">
-                Work Experience
-              </Link>
-              <Link href="#projects" className="border-r px-2 py-1">
-                Projects
-              </Link>
-              <Link href="#skills" className="border-r px-2 py-1">
-                Skills
-              </Link>
-              <Link href="#contact" className="border-r px-2 py-1">
-                Contact Me
-              </Link>
-            </ul>
-          </nav>
-        </header>
+        <Header />
         {children}
         <Analytics />
         <SpeedInsights />
+        <Footer />
       </body>
     </html>
   );

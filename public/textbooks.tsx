@@ -474,7 +474,7 @@ export const Experiences = [
 
 export const Testimonials = [
   {
-    img_src: "file.svg",
+    img_src: "",
     name: "John Doe",
     role: "CEO, Tech Innovators",
     content: `"Working with this developer was a game-changer for our project. Their expertise in React and Node.js helped us deliver a top-notch product ahead of schedule."`,
