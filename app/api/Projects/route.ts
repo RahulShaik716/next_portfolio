@@ -1,10 +1,9 @@
 import { getAllProjects } from "@/db/db";
-import { NextApiRequest } from "next";
 
 import { NextResponse } from "next/server";
 export const dynamic = "force-static"; // Makes this page or route static
 
-export async function GET(request: NextApiRequest) {
+export async function GET() {
   try {
     const projects = await getAllProjects();
     return NextResponse.json({ projects: projects }, { status: 200 });

@@ -4,7 +4,7 @@ import SkillsCard from "@/components/SkillsCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import TestimonialForm from "@/components/TestimonialForm";
 import WorkExperience from "@/components/WorkExperience";
-import { getAllExperiences, getAllSkills, getTestimonials } from "@/db/db";
+import { getAllExperiences, getAllSkills } from "@/db/db";
 import { ArrowRight } from "@geist-ui/icons";
 import Link from "next/link";
 

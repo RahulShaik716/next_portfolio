@@ -1,4 +1,3 @@
-import Image from "next/image";
 type props = {
   content: string;
   name: string;
