@@ -12,12 +12,14 @@ export default function TestimonialForm() {
   };
   const [formData, setFormData] = useState(initialFormData);
   const router = useRouter();
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLInputElement>) => {
     e.preventDefault();
     try {
       const response = await fetch("/api/insertTestimonial", {

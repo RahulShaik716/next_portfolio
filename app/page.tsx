@@ -7,7 +7,8 @@ import WorkExperience from "@/components/WorkExperience";
 import { getAllExperiences, getAllSkills } from "@/db/db";
 import { ArrowRight } from "@geist-ui/icons";
 import Link from "next/link";
-
+import { Experience, Skill, Testimonial } from "@/types/experience_schema";
+import { Project } from "@/types/project_schema";
 export default async function Home() {
   const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
   const response = await fetch(`${baseURL}/api/Projects`);
@@ -48,7 +49,7 @@ export default async function Home() {
       <section id="workexperience" className="py-20">
         <h1 className="text-center text-2xl font-bold mb-2">Work Experience</h1>
         <div className="flex flex-col gap-y-6">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp: Experience, index: number) => (
             <WorkExperience key={index} exp={exp} index={index} />
           ))}
         </div>
@@ -56,7 +57,7 @@ export default async function Home() {
       <section id="projects" className="py-20">
         <h1 className="text-center text-2xl font-bold mb-2"> Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
-          {projects.map((project) => (
+          {projects.map((project: Project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
@@ -64,7 +65,7 @@ export default async function Home() {
       <section id="skills" className="py-20">
         <h1 className="text-center text-2xl font-bold mb-5"> Skills </h1>
         <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
-          {skills.map((skill) => (
+          {skills.map((skill: Skill) => (
             <SkillsCard key={skill.title} skill={skill} />
           ))}
         </div>
@@ -75,7 +76,7 @@ export default async function Home() {
             Testimonials
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
-            {testimonials.map((testimonial) => (
+            {testimonials.map((testimonial: Testimonial) => (
               <TestimonialCard
                 key={testimonial.name}
                 testimonial={testimonial}

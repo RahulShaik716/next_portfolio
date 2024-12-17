@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Projects from "./models/Projects";
+import { Experience, Testimonial } from "@/types/experience_schema";
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-var
   var mongoose: any; // This must be a `var` and not a `let / const`
@@ -59,7 +59,7 @@ export const getAllExperiences = async () => {
   const db = conn.connection.useDb("Portfolio");
   try {
     const experiences = await db.collection("Experiences").find({}).toArray();
-    const plainExperiences = experiences.map((experience) => {
+    const plainExperiences = experiences.map((experience: Experience) => {
       return {
         // Convert MongoDB _id to a string
         title: experience.title,
@@ -97,7 +97,7 @@ export const getTestimonials = async () => {
   }
 };
 
-export const insertTestimonial = async (testimonial) => {
+export const insertTestimonial = async (testimonial: Testimonial) => {
   const conn = await dbConnect();
   const db = conn.connection.useDb("Portfolio");
   try {
