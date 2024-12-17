@@ -15,3 +15,11 @@ export type Testimonial = {
   role: string;
   company: string;
 };
+export type DBExperience = {
+  _id: object;
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  achievements: string[];
+};
