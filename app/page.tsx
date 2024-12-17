@@ -4,16 +4,28 @@ import SkillsCard from "@/components/SkillsCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import TestimonialForm from "@/components/TestimonialForm";
 import WorkExperience from "@/components/WorkExperience";
-import {
-  Projects,
-  Skills,
-  Experiences,
-  Testimonials,
-} from "@/public/textbooks";
+import { getAllExperiences, getAllSkills, getTestimonials } from "@/db/db";
 import { ArrowRight } from "@geist-ui/icons";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+  const response = await fetch(`${baseURL}/api/Projects`);
+  const { projects } = await response.json();
+
+  const testmonial_response = await fetch(`${baseURL}/api/Testimonials`);
+  const { testimonials } = await testmonial_response.json();
+  let experiences = [];
+  let skills = [];
+
+  try {
+    // Fetch projects data from the database
+    experiences = await getAllExperiences();
+    skills = await getAllSkills();
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+  }
+
   return (
     <main className="container max-w-7xl mx-auto px-4 md:px-0 bg-opacity-50 background-blur-md shadow-md">
       <section id="hero" className="py-20 text-center">
@@ -36,7 +48,7 @@ export default function Home() {
       <section id="workexperience" className="py-20">
         <h1 className="text-center text-2xl font-bold mb-2">Work Experience</h1>
         <div className="flex flex-col gap-y-6">
-          {Experiences.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <WorkExperience key={index} exp={exp} index={index} />
           ))}
         </div>
@@ -44,7 +56,7 @@ export default function Home() {
       <section id="projects" className="py-20">
         <h1 className="text-center text-2xl font-bold mb-2"> Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
-          {Projects.map((project) => (
+          {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
@@ -52,18 +64,18 @@ export default function Home() {
       <section id="skills" className="py-20">
         <h1 className="text-center text-2xl font-bold mb-5"> Skills </h1>
         <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
-          {Skills.map((skill) => (
+          {skills.map((skill) => (
             <SkillsCard key={skill.title} skill={skill} />
           ))}
         </div>
       </section>
-      {Testimonials.length && (
+      {testimonials.length && (
         <section id="testimonials" className="py-20">
           <div className="text-center text-2xl font-bold mb-5">
             Testimonials
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
-            {Testimonials.map((testimonial) => (
+            {testimonials.map((testimonial) => (
               <TestimonialCard
                 key={testimonial.name}
                 testimonial={testimonial}

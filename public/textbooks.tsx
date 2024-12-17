@@ -390,14 +390,6 @@ export const Projects = [
     website_url: "",
     github_url: "",
   },
-  // {
-  //   img_src: "",
-  //   title: "",
-  //   technologies: [],
-  //   description: "",
-  //   website_url: "",
-  //   github_url: "",
-  // },
 ];
 export const Experiences = [
   {
