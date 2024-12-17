@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 export type Experience = {
   title: string;
   company: string;
@@ -16,7 +17,7 @@ export type Testimonial = {
   company: string;
 };
 export type DBExperience = {
-  _id: object;
+  _id: ObjectId;
   title: string;
   company: string;
   period: string;
