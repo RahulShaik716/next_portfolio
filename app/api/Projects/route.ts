@@ -1,7 +1,7 @@
 import { getAllProjects } from "@/db/db";
 
 import { NextResponse } from "next/server";
-export const dynamic = "force-static"; // Makes this page or route static
+export const dynamic = "force-dynamic"; // Makes this page or route static
 
 export async function GET() {
   try {

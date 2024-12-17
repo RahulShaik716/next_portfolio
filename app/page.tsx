@@ -9,6 +9,7 @@ import { ArrowRight } from "@geist-ui/icons";
 import Link from "next/link";
 import { Experience, Skill, Testimonial } from "@/types/experience_schema";
 import { Project } from "@/types/project_schema";
+export const dynamic = "force-dynamic";
 export default async function Home() {
   const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
   const response = await fetch(`${baseURL}/api/Projects`);
