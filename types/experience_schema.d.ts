@@ -24,3 +24,8 @@ export type DBExperience = {
   description: string;
   achievements: string[];
 };
+export type Lead = {
+  name: string;
+  email: string;
+  message: string;
+};

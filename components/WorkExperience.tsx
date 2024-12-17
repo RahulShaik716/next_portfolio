@@ -23,7 +23,7 @@ export default function WorkExperience({ exp, index }: WorkExperienceProps) {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
   return (
-    <div className="space-y-8 border border-slate-300 dark:border-slate-900 p-2 rounded-md">
+    <div className="space-y-8 shadow-xl bg-opacity-50 background-blur-lg  p-2 rounded-md">
       <div key={index} className="relative overflow-hidden">
         <div className="absolute left-2 top-4 bottom-2 w-0.5 bg-foreground"></div>
         <div className="absolute left-2 top-1 w-3 h-3 rounded-full bg-foreground -translate-x-1/2"></div>
@@ -35,9 +35,7 @@ export default function WorkExperience({ exp, index }: WorkExperienceProps) {
             </div>
           </div>
           <div>
-            <p className="text-slate-600 dark:text-slate-400">
-              {exp.description}
-            </p>
+            <p className="text-slate-600">{exp.description}</p>
             {expandedIndex === index && (
               <ul className="list-disc list-inside mt-4 space-y-2">
                 {exp.achievements.map((achievement: string, i: number) => (
@@ -46,18 +44,18 @@ export default function WorkExperience({ exp, index }: WorkExperienceProps) {
               </ul>
             )}
             <button
-              className="mt-4 bg-slate-200 dark:bg-slate-900 px-4 py-2 rounded-lg flex flex-row items-center gap-x-2 text-foreground"
+              className="mt-4 bg-slate-200 px-4 py-2 rounded-lg flex flex-row items-center gap-x-2 text-foreground"
               onClick={() => toggleExpand(index)}
             >
               {expandedIndex === index ? (
                 <>
                   Hide details
-                  <ChevronDown />
+                  <ChevronUp />
                 </>
               ) : (
                 <>
                   Show details
-                  <ChevronUp />
+                  <ChevronDown />
                 </>
               )}
             </button>

@@ -43,7 +43,7 @@ export default function TestimonialForm() {
   };
   return (
     <form
-      className="flex flex-col gap-3 border border-slate-300 dark:border-slate-900 max-w-3xl mx-auto p-6 rounded-md
+      className="flex flex-col gap-3 border border-slate-300 max-w-3xl mx-auto p-6 rounded-md
       bg-opacity-50 background-blur-md shadow-md
     "
     >
@@ -58,6 +58,7 @@ export default function TestimonialForm() {
           className="border border-slate-300  py-2 rounded-md bg-inherit"
           value={formData.name}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -67,6 +68,7 @@ export default function TestimonialForm() {
           className="border border-slate-300 py-2 rounded-md bg-inherit"
           onChange={handleChange}
           value={formData.role}
+          required
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -76,6 +78,7 @@ export default function TestimonialForm() {
           className="border border-slate-300  py-2 rounded-md bg-inherit"
           onChange={handleChange}
           value={formData.company}
+          required
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -86,6 +89,7 @@ export default function TestimonialForm() {
           className="border border-slate-300  py-2 rounded-md bg-inherit"
           onChange={handleChange}
           value={formData.content}
+          required
         />
       </div>
       <input

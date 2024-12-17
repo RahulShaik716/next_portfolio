@@ -7,7 +7,7 @@ type props = {
 };
 export default function ProjectCard({ project }: { project: props }) {
   return (
-    <div className="flex flex-col max-w-2xl  border border-slate-200 dark:border-slate-800 rounded-lg">
+    <div className="flex flex-col max-w-2xl bg-opacity-50 background-blur-xl shadow-2xl rounded-lg">
       <Image
         src={project.img_src}
         alt="project_image"

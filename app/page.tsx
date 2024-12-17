@@ -4,7 +4,6 @@ import SkillsCard from "@/components/SkillsCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import TestimonialForm from "@/components/TestimonialForm";
 import WorkExperience from "@/components/WorkExperience";
-import { getAllExperiences, getAllSkills } from "@/db/db";
 import { ArrowRight } from "@geist-ui/icons";
 import Link from "next/link";
 import { Experience, Skill, Testimonial } from "@/types/experience_schema";
@@ -17,21 +16,20 @@ export default async function Home() {
 
   const testmonial_response = await fetch(`${baseURL}/api/Testimonials`);
   const { testimonials } = await testmonial_response.json();
-  let experiences = [];
-  let skills = [];
 
-  try {
-    // Fetch projects data from the database
-    experiences = await getAllExperiences();
-    skills = await getAllSkills();
-  } catch (error) {
-    console.error("Error fetching projects:", error);
-  }
+  const experiences_response = await fetch(`${baseURL}/api/Experiences`);
+  const { experiences } = await experiences_response.json();
+
+  const skills_response = await fetch(`${baseURL}/api/Skills`);
+  const { skills } = await skills_response.json();
 
   return (
-    <main className="container max-w-7xl mx-auto px-4 md:px-0 bg-opacity-50 background-blur-md shadow-md">
-      <section id="hero" className="py-20 text-center">
-        <h1 className="text-4xl font-bold mb-4 animate-fade-in">Rahul Shaik</h1>
+    <main className="container max-w-7xl mx-auto px-4 md:px-0">
+      <section
+        id="hero"
+        className="py-20 h-screen text-center flex flex-col justify-center"
+      >
+        <h1 className="text-4xl font-bold mb-4">Rahul Shaik</h1>
         <p className="text-xl mb-8 animate-fade-in animation-delay-200">
           Full Stack Developer
         </p>

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { DBExperience, Testimonial } from "@/types/experience_schema";
+import { DBExperience, Lead, Testimonial } from "@/types/experience_schema";
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-var
   var mongoose: any; // This must be a `var` and not a `let / const`
@@ -106,6 +106,19 @@ export const insertTestimonial = async (testimonial: Testimonial) => {
     return true;
   } catch (error) {
     console.error("Error inserting testimonial:", error);
+    return false;
+  }
+};
+
+export const insertLead = async (Lead: Lead) => {
+  const conn = await dbConnect();
+  const db = conn.connection.useDb("Portfolio");
+  try {
+    await db.collection("Leads").insertOne(Lead);
+    console.log("Lead Inserted successfully");
+    return true;
+  } catch (error) {
+    console.error("Error inserting lead:", error);
     return false;
   }
 };
