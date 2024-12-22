@@ -58,7 +58,7 @@ export default function ProjectModal({
               className={`px-4 py-2 ${
                 project.website_url
                   ? "bg-black text-white rounded-lg hover:bg-white hover:text-black cursor-pointer"
-                  : "cursor-not-allowed"
+                  : "cursor-not-allowed pointer-events-none"
               } `}
             >
               {project.website_url ? "Project Link" : "Private App"}
@@ -68,7 +68,7 @@ export default function ProjectModal({
               className={`px-4 py-2 ${
                 project.github_url
                   ? "bg-black text-white rounded-lg hover:bg-white hover:text-black cursor-pointer"
-                  : "cursor-not-allowed"
+                  : "cursor-not-allowed pointer-events-none"
               } `}
             >
               {project.github_url ? "Github Link" : "Private Repo"}

@@ -1,6 +1,6 @@
 {
   "name": "Rahul Shaik's Portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@geist-ui/icons": "^1.0.2",
+    "@hookform/resolvers": "^3.9.1",
     "@sendgrid/mail": "^8.1.4",
     "@types/nodemailer": "^6.4.17",
     "@vercel/analytics": "^1.4.1",
@@ -21,7 +22,9 @@
     "next": "15.0.4",
     "nodemailer": "^6.9.16",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@next/env": "^15.0.4",

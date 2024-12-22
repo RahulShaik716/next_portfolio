@@ -2,8 +2,10 @@
 import { Github, Menu, Linkedin, X } from "@geist-ui/icons";
 import Link from "next/link";
 import { useState } from "react";
+
 export default function Header() {
   const [show, setShow] = useState(false);
+
   return (
     <header
       className="fixed z-10 w-full mx-auto flex justify-between p-2 bg-background text-foreground opacity-100 
@@ -60,49 +62,51 @@ export default function Header() {
           </Link>
           <Menu onClick={() => setShow(() => !show)} />
           {show && (
-            <ul className="flex flex-col gap-y-1 absolute top-0 right-0 w-full bg-background z-5 lg:hidden py-2 text-xl">
-              <div
-                onClick={() => setShow(false)}
-                className="cursor-pointer self-end"
-              >
-                <X size={36} />
-              </div>
-              <Link
-                href="#workexperience"
-                onClick={() => setShow(false)}
-                className="px-2 py-1"
-              >
-                Work Experience
-              </Link>
-              <Link
-                href="#projects"
-                onClick={() => setShow(false)}
-                className="px-2 py-1"
-              >
-                Projects
-              </Link>
-              <Link
-                href="#skills"
-                onClick={() => setShow(false)}
-                className="px-2 py-1"
-              >
-                Skills
-              </Link>
-              <Link
-                href="#testimonials"
-                onClick={() => setShow(false)}
-                className="px-2 py-1"
-              >
-                Testimonials
-              </Link>
-              <Link
-                href="#contact"
-                onClick={() => setShow(false)}
-                className="px-2 py-1"
-              >
-                Contact Me
-              </Link>
-            </ul>
+            <div className=" fixed inset-0 w-full h-full bg-black bg-opacity-50">
+              <ul className="flex flex-col gap-y-1 absolute top-0 right-0 w-full bg-white z-5 lg:hidden py-4 text-xl">
+                <div
+                  onClick={() => setShow(false)}
+                  className="cursor-pointer self-end hover:bg-black"
+                >
+                  <X size={36} />
+                </div>
+                <Link
+                  href="#workexperience"
+                  onClick={() => setShow(false)}
+                  className="px-2 py-1"
+                >
+                  Work Experience
+                </Link>
+                <Link
+                  href="#projects"
+                  onClick={() => setShow(false)}
+                  className="px-2 py-1"
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="#skills"
+                  onClick={() => setShow(false)}
+                  className="px-2 py-1"
+                >
+                  Skills
+                </Link>
+                <Link
+                  href="#testimonials"
+                  onClick={() => setShow(false)}
+                  className="px-2 py-1"
+                >
+                  Testimonials
+                </Link>
+                <Link
+                  href="#contact"
+                  onClick={() => setShow(false)}
+                  className="px-2 py-1"
+                >
+                  Contact Me
+                </Link>
+              </ul>
+            </div>
           )}
         </div>
       </nav>
