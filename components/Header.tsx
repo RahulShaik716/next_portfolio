@@ -1,5 +1,5 @@
 "use client";
-import { Github, Menu, Linkedin, X } from "@geist-ui/icons";
+import { Github, Menu, Linkedin, X, Mail } from "@geist-ui/icons";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -59,6 +59,9 @@ export default function Header() {
           </Link>
           <Link href="https://github.com/RahulShaik716" className="px-2">
             <Github />
+          </Link>
+          <Link href={`mailto:${process.env.EMAIL}`} className="px-2">
+            <Mail />
           </Link>
           <Menu onClick={() => setShow(() => !show)} />
           {show && (
