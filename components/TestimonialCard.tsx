@@ -10,7 +10,7 @@ export default async function TestimonialCard({
   testimonial: props;
 }) {
   return (
-    <div className="bg-opacity-75 background-blur-2xl shadow-2xl max-w-md px-4 py-4 rounded-lg flex flex-col gap-3 ">
+    <div className="bg-opacity-75 background-blur-2xl shadow-2xl shadow-black max-w-2xl bg-slate-950 text-white px-4 py-4 rounded-lg flex flex-col gap-3 ">
       <p className="italic tracking-wide leading-normal">
         {`"${testimonial.content}"`}
       </p>
