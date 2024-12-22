@@ -35,6 +35,12 @@ export default function RootLayout({
           property="og:url"
           content="https://next-portfolio-rahulshaik716s-projects.vercel.app/"
         />
+        <meta property="twitter:image" content="/hero.jpg" />
+        <meta property="twitter:title" content="Rahul Shaik Portfolio" />
+        <meta
+          property="twitter:description"
+          content="Showcasing projects and skills of a Full Stack Developer."
+        />
       </head>
       <body className="overflow-y-scroll">
         <Header />
