@@ -12,6 +12,8 @@ import Image from "next/image";
 export const dynamic = "force-dynamic";
 export default async function Home() {
   const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+  const profile_response = await fetch(`${baseURL}/api/Profile`);
+  const { profile } = await profile_response.json();
   const response = await fetch(`${baseURL}/api/Projects`);
   const { projects } = await response.json();
 
@@ -36,12 +38,12 @@ export default async function Home() {
           id="hero"
           className="py-20 h-screen container max-w-7xl text-center flex flex-col justify-center mx-auto"
         >
-          <h1 className="text-4xl font-bold mb-4">Rahul Shaik</h1>
+          <h1 className="text-4xl font-bold mb-4">{profile.name}</h1>
           <p className="text-xl mb-8 animate-fade-in animation-delay-200 font-semibold">
-            Full Stack Developer
+            {profile.role}
           </p>
-          <p className="text-lg mb-8 max-w-2xl mx-auto animiate-fade-in animation-delay-400 font-semibold">
-            Crafting seamless digital experiences, one line of code at a time.
+          <p className="text-lg mb-8 max-w-2xl mx-auto font-semibold">
+            {profile.Tagline}
           </p>
           <button className="animate-fade-in animation-delay-500">
             <Link
@@ -51,9 +53,9 @@ export default async function Home() {
               Get in touch &nbsp; <ArrowRight />
             </Link>
           </button>
-          <div className="self-center flex flex-col lg:flex-row mt-6 justify-center items-center gap-x-2">
+          <div className="self-center flex flex-col md:flex-row mt-6 justify-center items-center gap-2">
             <Image
-              src="/hero.jpg"
+              src={profile.profile_image}
               alt="display picture"
               width={40}
               height={40}
@@ -61,9 +63,14 @@ export default async function Home() {
               unoptimized
             />
             <p className="leading-relaxed text-pretty max-w-[66ch]">
-              {`11 years of computer science experience. About 8 years of software engineering experience. Trying to make my mark in the field of computer science and software engineering, interested in Full Stack Development and Artifical Intelligence. `}
+              {profile.description}
             </p>
           </div>
+          {profile.event_message && (
+            <p className="text-green-700 mt-4 font-bold animate-pulse">
+              {profile.event_message}
+            </p>
+          )}
         </div>
       </section>
 

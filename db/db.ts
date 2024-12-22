@@ -122,3 +122,14 @@ export const insertLead = async (Lead: Lead) => {
     return false;
   }
 };
+
+export const getProfile = async () => {
+  const conn = await dbConnect();
+  const db = conn.connection.useDb("Portfolio");
+  try {
+    const profile = await db.collection("Profile").find({}).toArray();
+    return profile;
+  } catch (e) {
+    console.log("Error fetching Profile", e);
+  }
+};

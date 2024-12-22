@@ -24,7 +24,7 @@ export default function ProjectModal({
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      <div className="relative w-full max-w-3xl bg-white rounded-lg shadow-lg text-wrap h-[90vh]">
+      <div className="relative w-full max-w-3xl bg-white rounded-lg shadow-lg text-wrap h-fit overflow-y-auto">
         <button
           className="absolute top-4 right-4  p-2 hover:bg-slate-300 focus:outline-none"
           onClick={() => showModal(false)}
@@ -32,7 +32,7 @@ export default function ProjectModal({
         >
           <X />
         </button>
-        <div className="overflow-y-auto mt-6 md:mt-0 h-full px-6 py-4">
+        <div className="overflow-y-auto mt-6 md:mt-0  px-6 py-4">
           <h1 id="modal-title" className="text-2xl font-bold text-center mb-4">
             {project.title}
           </h1>
