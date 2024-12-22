@@ -3,4 +3,6 @@ export type Project = {
   title: string;
   technologies: string[];
   description: string;
+  website_url: string;
+  github_url: string;
 };

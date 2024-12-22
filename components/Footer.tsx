@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Github, Linkedin } from "@geist-ui/icons";
 export default function Footer() {
   return (
-    <div className="fixed bottom-0  w-full hidden lg:flex flex-row justify-between bg-background text-foreground z-10 shadow-md p-2 border-t border-slate-300 items-center">
+    <div className="fixed bottom-0  w-full hidden lg:flex flex-row justify-between bg-background border-t z-10 p-2 items-center font-bold">
       <div>
         &copy; {new Date().getFullYear().toString()} Rahul Shaik . All Rights
         Reserved.

@@ -1,11 +1,18 @@
+"use client";
+import { X } from "@geist-ui/icons";
 import Image from "next/image";
+import { useState } from "react";
+import ProjectModal from "./ProjectModal";
 type props = {
   img_src: string;
   title: string;
   technologies: string[];
   description: string;
+  github_link: string;
+  website_link: string;
 };
 export default function ProjectCard({ project }: { project: props }) {
+  const [modal, showModal] = useState(false);
   return (
     <div className="flex flex-col max-w-2xl bg-opacity-50 background-blur-xl shadow-2xl rounded-lg">
       <Image
@@ -22,10 +29,13 @@ export default function ProjectCard({ project }: { project: props }) {
           <p className="text-slate-400">{project.technologies.join(" ,")}</p>
         </div>
         <p className="mt-2 max-h-24 overflow-clip">{project.description}</p>
-        <button className="p-2 border border-slate-200 dark:border-slate-800 text-left w-fit rounded-lg">
-          <p>Learn More</p>
+        <button className="p-2 border border-slate-200  text-left w-fit rounded-lg bg-black text-white hover:bg-white hover:text-black  ">
+          <p onClick={() => showModal(() => !modal)} className="text-sm">
+            Learn More
+          </p>
         </button>
       </div>
+      {modal && <ProjectModal project={project} showModal={showModal} />}
     </div>
   );
 }

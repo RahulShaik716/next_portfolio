@@ -36,7 +36,7 @@ export default function RootLayout({
           content="https://next-portfolio-rahulshaik716s-projects.vercel.app/"
         />
       </head>
-      <body>
+      <body className="overflow-y-scroll">
         <Header />
         {children}
         <Analytics />
