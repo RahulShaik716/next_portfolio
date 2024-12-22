@@ -1,5 +1,6 @@
 import { X } from "@geist-ui/icons";
 import Image from "next/image";
+import { Dispatch, SetStateAction } from "react";
 
 type props = {
   img_src: string;

@@ -1,5 +1,4 @@
 "use client";
-import { X } from "@geist-ui/icons";
 import Image from "next/image";
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
@@ -8,8 +7,8 @@ type props = {
   title: string;
   technologies: string[];
   description: string;
-  github_link: string;
-  website_link: string;
+  github_url: string;
+  website_url: string;
 };
 export default function ProjectCard({ project }: { project: props }) {
   const [modal, showModal] = useState(false);
