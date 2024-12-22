@@ -30,7 +30,7 @@ export default function RootLayout({
           property="og:description"
           content="Showcasing projects and skills of a Full Stack Developer."
         />
-        <meta property="og:image" content="favicon_new.jpg" />
+        <meta property="og:image" content="/hero.jgp" />
         <meta
           property="og:url"
           content="https://next-portfolio-rahulshaik716s-projects.vercel.app/"
