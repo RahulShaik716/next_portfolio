@@ -51,7 +51,7 @@ export default async function Home() {
               Get in touch &nbsp; <ArrowRight />
             </Link>
           </button>
-          <div className="self-center flex flex-row mt-6 items-center w-[66ch] gap-x-2">
+          <div className="self-center flex flex-col lg:flex-row mt-6 justify-center items-center gap-x-2">
             <Image
               src="/hero.jpg"
               alt="display picture"
@@ -60,7 +60,7 @@ export default async function Home() {
               className="rounded-full w-32 h-32"
               unoptimized
             />
-            <p className="leading-relaxed text-pretty">
+            <p className="leading-relaxed text-pretty max-w-[66ch]">
               {`11 years of computer science experience. About 8 years of software engineering experience. Trying to make my mark in the field of computer science and software engineering, interested in Full Stack Development and Artifical Intelligence. `}
             </p>
           </div>
