@@ -52,7 +52,7 @@ export default function TestimonialForm() {
   };
   return (
     <form
-      className="flex flex-col gap-3 border border-slate-300 max-w-3xl mx-auto p-6 rounded-md
+      className="glassmorphism flex flex-col gap-3 border border-slate-300 max-w-3xl mx-auto p-6 rounded-md
       bg-opacity-50 background-blur-md shadow-md
     "
       onSubmit={handleSubmit(onSubmit)}

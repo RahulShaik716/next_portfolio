@@ -8,22 +8,19 @@ type Props = {
 
 export default function T_card({ textbook }: { textbook: Props }) {
   return (
-    <div className="card flex flex-col items-center justify-evenly gap-y-2 mt-2 py-2 px-1 shadow-md">
-      <h3 className="card_title h3 font-semibold overflow-clip">
+    <Link href={textbook.download_link} className="relative flex flex-col">
+      <Image
+        src={
+          textbook.img_src ? textbook.img_src : "/book-cover-placeholder.png"
+        }
+        alt="textbook-image"
+        className="w-64 h-64 object-cover hover:scale-110"
+        width={240}
+        height={240}
+      />
+      <div className="absolute z-10 bg-black text-white bg-opacity-50 bottom-0 max-w-64 w-full text-center">
         {textbook.name}
-      </h3>
-      <Link href={`${textbook.download_link}`}>
-        <Image
-          src={textbook.img_src || "file.svg"}
-          alt="textbook_image"
-          width={96}
-          height={96}
-          className="w-96 h-96"
-          quality={100}
-          layout="fixed"
-          unoptimized
-        ></Image>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
