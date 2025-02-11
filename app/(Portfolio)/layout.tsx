@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="favicon_new.jpg" />
+        <link rel="icon" href="favicon.ico" />
         <meta
           property="og:title"
           content="Rahul Shaik Portfolio - Full Stack Developer"
