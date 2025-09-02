@@ -60,7 +60,7 @@ export default async function Home() {
               width={40}
               height={40}
               className="rounded-full w-32 h-32"
-              unoptimized
+              loading="lazy"
             />
             <p className="leading-relaxed text-pretty max-w-[66ch]">
               {profile.description}
