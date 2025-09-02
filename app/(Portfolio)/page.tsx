@@ -57,10 +57,11 @@ export default async function Home() {
             <Image
               src={profile.profile_image}
               alt="display picture"
-              width={40}
-              height={40}
-              className="rounded-full w-32 h-32"
+              width={1080}
+              height={1080}
+              className="rounded-full w-32 h-32 object-cover"
               loading="lazy"
+              unoptimized
             />
             <p className="leading-relaxed text-pretty max-w-[66ch]">
               {profile.description}
