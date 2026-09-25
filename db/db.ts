@@ -47,7 +47,11 @@ export const getAllProjects = async () => {
   const db = conn.connection.useDb("Portfolio");
   try {
     // Use the Mongoose model to query the projects collection
-    const projects = await db.collection("Projects").find({}).toArray();
+    const projects = await db
+      .collection("Projects")
+      .find({})
+      .sort({ order: 1 })
+      .toArray();
     return projects;
   } catch (error) {
     console.error("Error retrieving projects:", error);

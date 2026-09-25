@@ -5,4 +5,5 @@ export type Project = {
   description: string;
   website_url: string;
   github_url: string;
+  order?: number;
 };
