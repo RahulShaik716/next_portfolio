@@ -40,14 +40,18 @@ export default function ProjectModal({
             {project.technologies.join(", ")}
           </p>
           <div className="flex justify-center mb-6">
-            <Image
-              src={project.img_src}
-              alt="Project image"
-              width={400}
-              height={400}
-              className="object-contain h-48 w-full"
-              unoptimized
-            />
+            {project.img_src ? (
+              <Image
+                src={project.img_src}
+                alt="Project image"
+                width={400}
+                height={400}
+                className="object-contain h-48 w-full"
+                unoptimized
+              />
+            ) : (
+              <div className="h-48 w-full bg-slate-200" />
+            )}
           </div>
           <div className="max-w-[66ch] mx-auto text-justify leading-relaxed mb-6">
             {project.description}

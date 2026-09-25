@@ -14,14 +14,18 @@ export default function ProjectCard({ project }: { project: props }) {
   const [modal, showModal] = useState(false);
   return (
     <div className="flex flex-col max-w-2xl bg-opacity-50 background-blur-xl shadow-2xl rounded-lg">
-      <Image
-        src={project.img_src}
-        alt="project_image"
-        width={400}
-        height={200}
-        className="object-cover h-48 w-full"
-        unoptimized
-      />
+      {project.img_src ? (
+        <Image
+          src={project.img_src}
+          alt="project_image"
+          width={400}
+          height={200}
+          className="object-cover h-48 w-full"
+          unoptimized
+        />
+      ) : (
+        <div className="h-48 w-full bg-slate-200" />
+      )}
       <div className="flex flex-col p-4 gap-4">
         <div>
           <h2 className="font-bold text-xl"> {project.title} </h2>
